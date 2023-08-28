@@ -1,7 +1,11 @@
 import { Stack, SwipeableDrawer, Tooltip } from "@mui/material";
 import React from "react";
 import { RiCloseCircleFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 export default function SideMenu(props) {
+  const navigate = useNavigate();
+  const location = window.location.pathname;
+
   return (
     <SwipeableDrawer
       anchor={"right"}
@@ -30,8 +34,27 @@ export default function SideMenu(props) {
       <ul className="flex flex-col gap-8 justify-around w-[100%]">
         <li>
           <Tooltip title="Coming Soon">
-            <p className="cursor-pointer hover:text-blue text-dark text-[20px] font-[500] font-[22px]">
+            <p className="cursor-pointer hover:text-secondary text-dark text-[20px] font-[500] font-[22px]">
               Products
+            </p>
+          </Tooltip>
+        </li>
+        <li>
+          <p
+            onClick={() => {
+              navigate("/about");
+            }}
+            className={`cursor-pointer  ${
+              location.includes("about") ? "text-secondary" : "text-dark"
+            } text-[20px] font-[500] hover:text-blue`}
+          >
+            About
+          </p>
+        </li>
+        <li>
+          <Tooltip title="Coming Soon">
+            <p className="cursor-pointer hover:text-secondary text-dark text-[20px] font-[500] font-[22px]">
+              Pricing
             </p>
           </Tooltip>
         </li>
@@ -40,7 +63,7 @@ export default function SideMenu(props) {
             onClick={() => {
               props.handleOpenTeamModal();
             }}
-            className=" cursor-pointer text-dark text-[20px]  font-[500] hover:text-blue"
+            className=" cursor-pointer text-dark text-[20px]  font-[500] hover:text-secondary"
           >
             Team
           </p>

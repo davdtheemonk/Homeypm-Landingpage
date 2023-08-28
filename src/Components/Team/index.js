@@ -49,7 +49,7 @@ export default function Team(props) {
               alt="co-founder - Max"
               className="w-[100px] h-[100px] rounded-full mb-2"
             />
-            <p className="font-bold text-white mb-1">Maxwell O. Gad</p>
+            <p className="font-bold text-white mb-1">O. Maxwell Gad</p>
             <p className="text-gray">Co-Founder/Product Lead</p>
           </div>
         </div>

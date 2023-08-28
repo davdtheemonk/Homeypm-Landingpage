@@ -37,6 +37,22 @@ export default function WaitlistModal(props) {
       handleInvite();
     }
   };
+
+  const handleTwitter = () => {
+    window.open(
+      "https://twitter.com/homey_pm?t=JCeVDWZzLhOwvV8f8P3UQQ&s=09",
+      "_blank"
+    );
+  };
+  const handleFacebook = () => {
+    window.open(
+      "https://www.facebook.com/profile.php?id=61550504325075",
+      "_blank"
+    );
+  };
+  const handleLinkedIn = () => {
+    window.open("https://www.linkedin.com/company/homey-pm/", "_blank");
+  };
   return (
     <Modal
       open={props.isOpen}
@@ -79,10 +95,25 @@ export default function WaitlistModal(props) {
         {errors.email && (
           <p className="text-danger text-sm mt-1">{errors.email}</p>
         )}
-        <div className="flex w-[60%] flex-row mt-10 justify-between items-center">
-          <RiTwitterFill className="text-secondary text-2xl cursor-pointer" />
-          <RiFacebookBoxFill className="text-secondary text-2xl cursor-pointer" />
-          <RiLinkedinFill className="text-secondary text-2xl cursor-pointer" />
+        <div className="flex w-[60%] flex-row mt-5 justify-between items-center">
+          <RiTwitterFill
+            onClick={() => {
+              handleTwitter();
+            }}
+            className="text-secondary text-2xl cursor-pointer"
+          />
+          <RiFacebookBoxFill
+            onClick={() => {
+              handleFacebook();
+            }}
+            className="text-secondary text-2xl cursor-pointer"
+          />
+          <RiLinkedinFill
+            onClick={() => {
+              handleLinkedIn();
+            }}
+            className="text-secondary text-2xl cursor-pointer"
+          />
         </div>
       </Box>
     </Modal>
