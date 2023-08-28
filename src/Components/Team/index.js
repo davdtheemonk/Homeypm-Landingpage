@@ -29,7 +29,7 @@ export default function Team(props) {
         className="md:w-[450px] md:h-[240px] h-[400px] w-[90%] flex flex-col justify-center items-center"
         sx={{
           ...style,
-          transition: "0.4s ease-in",
+          transition: "0.5s ease-in",
         }}
       >
         <p className="font-bold text-2xl text-white">Team</p>
