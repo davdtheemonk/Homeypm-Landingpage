@@ -25,7 +25,7 @@ export default function WaitlistModal(props) {
   const { fields, handleFieldChange } = useFormFields({
     EMAIL: "",
   });
-  console.log(process.env.REACT_APP_MAILCHIMP_URL);
+
   const handleTwitter = () => {
     window.open(
       "https://twitter.com/homey_pm?t=JCeVDWZzLhOwvV8f8P3UQQ&s=09",
