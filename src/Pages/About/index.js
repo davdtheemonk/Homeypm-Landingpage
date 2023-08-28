@@ -27,10 +27,10 @@ export default function About() {
       <div className=" md:px-56 p-4  relative  gradient md:mt-28 mt-24  flex justify-center items-center ">
         <div className=" bg-secondary flex flex-col h-auto top-12 p-20 rounded-md justify-center items-center gap-2">
           <p className="font-bold text-darkblue md:text-5xl text-2xl text-center">
-            Homey is building software solutions for the real estate management.
+            Homey is building software solutions for real estate management.
           </p>
           <div className="flex flex-col w-full justify-center items-center gap-1">
-            <p className="font-[500] text-darkblue text-md">
+            <p className="font-[500] text-darkblue text-md italic">
               Follow us on this journey
             </p>
             <div className="flex  flex-row  justify-evenly items-center">
@@ -61,21 +61,27 @@ export default function About() {
           <img
             src="/houses.gif"
             alt="house-animation"
-            className=" cursor-pointer rounded-2lg h-100 "
+            className=" cursor-pointer rounded-2lg h-96 rounded-lg "
           />
-          <div className="flex flex-col p-5 gap-10">
+          <div className="flex flex-col p-5 gap-10 m-auto">
             <p className="font-bold text-4xl text-dark text-start">
-              About Homey
+              Empower Your Property Management Journey with Homey: Streamline,
+              Optimize, Succeed
             </p>
             <p className="text-dark font-[500] text-xl ">
-              Homey is a Saas platform offering property management for real
-              estate portfolios such as rental units. Our main goal is to
-              maximize profits by providing automation of the daily tasks in
-              management of portfolios such as communication or marketing
-              campaigns, assist in providing insights for sales, marketing and
-              budgeting by leveraging real time data and analytics and also
-              providing accountability measures by managing transactions between
-              different stakeholders using the platform.
+              Homey Property Manager is a comprehensive platform that
+              revolutionizes property management. With features ranging from
+              centralized property databases and automated rent collection to
+              real-time cash flow monitoring and targeted advertising campaigns,
+              Homey empowers property managers to streamline operations,
+              optimize financial performance, and enhance tenant experiences.
+              Our user-friendly interface, coupled with robust analytics and
+              reporting, ensures data-driven decision-making. With Homey,
+              property managers can effortlessly manage their entire portfolio,
+              from lease agreements to maintenance requests, while fostering
+              transparent communication with tenants, owners, and vendors.
+              Experience the future of property management with Homey and
+              elevate your success in the real estate industry.
             </p>
           </div>
         </div>

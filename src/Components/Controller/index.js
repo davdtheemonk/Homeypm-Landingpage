@@ -25,7 +25,7 @@ export default function Controller() {
     openTeamModal(true);
   };
   return (
-    <div className=" flex flex-col h-screen w-full ">
+    <div className="">
       <LpHeader
         handleOpenModal={handleOpenModal}
         handleOpenTeamModal={handleOpenTeamModal}

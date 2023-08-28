@@ -33,50 +33,48 @@ export default function Roles() {
       id: 0,
       logo: "/property.gif",
       title: "Property Management",
-      description: `Landlords have the ability to manage their tenants in the comfort of their respective positions. The platform gives information on empty rooms available as well as improvement recommendations by tenants. Similarly it gives details to the landlord on the 
-      occupied rooms through giving details on the individuals occupying the rooms`,
+      description: `Homey's property management features are designed to enhance operational efficiency and elevate tenant experiences. By offering an all-in-one solution that simplifies property management tasks, we empower property managers to focus on what matters most: delivering exceptional service to tenants and maximizing property performance.`,
     },
     {
       id: 1,
       logo: "/marketing.gif",
       title: "Marketing and Advertising Services",
       description:
-        "We focus on automatng the marketng and advertsement processes. At a designated fee, the platorm will market houses and fats through creating advertsement spaces for houses as planned by the landlords. The spaces will give and sell the respectve house features thus ease in acquiring more tenants onboard. Those who pay for the advertsement fees will be featured on the ad spaces as well as on our social media spaces to help sell their houses for more tenants. The platorms will also indicate vacant spaces in the houses in case available.",
+        "Homey's marketing and advertising services seamlessly integrate into our platform. Property managers can effortlessly create, update, and syndicate property listings across various platforms. With intuitive tools, you can design visually compelling showcases and launch tailored advertising campaigns to increase property visibility.",
     },
     {
       id: 2,
       logo: "./budget.gif",
-      title: "Budgeting",
-      description: `Through the display of the monthly bills on the platform, we believe that this will help tenants in their individual budgeting. Similarly, the landlords will have ease in calculating 
-      their totals with regards to the total monthly payments received through the platform. This will help them allocate bills for savings, renovation etc.`,
+      title: "Real-time cashflow monitoring",
+      description: `No longer will you need to wait for manual updates or make decisions based on outdated information. With real-time insights, you're empowered to make informed choices that optimize revenue and drive financial success.`,
     },
     {
       id: 3,
       logo: "./analytics.gif",
       title: "Analytics and Reports",
       description:
-        "Through the feedback loops created, sales analysis can be easily made by landlords from the feedbacks made by the tenants thus improving services hence increased drive in sales. This analysis will be automated by allowing an ML algorithm to observe cash inflow and outflow (optimization) thus reducing cost.",
+        "Simply select the data points you want to analyze, and our intuitive dashboards present information in a visually engaging manner. Whether you're tracking performance over time or delving into specific property details, Homey's analytics empower you to make well-informed decisions.",
     },
     {
       id: 4,
       logo: "./rating.gif",
-      title: "Tenant Feedback Loop",
+      title: "Communication and feedback",
       description:
-        "immediate feedback spaces will be available for both the landlord and tenant pages where feedbacks and responses will be channeled thus improved communication. There will be almost an immediate access to the landlords in case of any challenge.",
+        "By actively engaging with users and leveraging their insights, we continuously enhance our platform to better serve the needs of property managers, tenants, and vendors. Our commitment to user-driven innovation ensures that Homey evolves in sync with user expectations and industry trends.",
     },
     {
       id: 5,
       logo: "./transaction.gif",
       title: "Accounting",
       description:
-        "Individual tenants profile pages will have monthly rental, water and electricity bills updated on the tenant's pages as well as the due dates for the payments and penalty fees for late payments all updated on the page. The pages will give or rather enable tenants to make direct payments for these bills at the comfort of their homes and similarly save all the transaction details that is the dates when the payments were made and the amount paid. We believe that this will improve clarity on payments done by the tenants.",
+        "Homey Property Manager understands that financial management is a cornerstone of successful property management. Our comprehensive accounting feature is designed to simplify and streamline the financial aspects of property management, empowering property managers to maintain accurate records, optimize cash flow, and make informed financial decisions.",
     },
     {
       id: 6,
       logo: "./transaction.gif",
       title: "Intergrations",
       description:
-        "Individual tenants profile pages will have monthly rental, water and electricity bills updated on the tenant's pages as well as the due dates for the payments and penalty fees for late payments all updated on the page. The pages will give or rather enable tenants to make direct payments for these bills at the comfort of their homes and similarly save all the transaction details that is the dates when the payments were made and the amount paid. We believe that this will improve clarity on payments done by the tenants.",
+        "Integrations are the key to unlocking an enhanced property management experience. Homey's integration capabilities empower property managers to work smarter, not harder. Whether you're enhancing communication, optimizing marketing efforts, or ensuring financial accuracy, Homey ensures that your property management operations are cohesive and efficient.",
     },
   ];
   return (

@@ -33,12 +33,7 @@ export default function LpHeader(props) {
           About
         </p>
         <Tooltip title="Coming Soon">
-          <p
-            onClick={() => {
-              props.handleOpenTeamModal();
-            }}
-            className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue"
-          >
+          <p className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue">
             Pricing
           </p>
         </Tooltip>
