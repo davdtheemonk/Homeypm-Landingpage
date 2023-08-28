@@ -59,8 +59,8 @@ export default function About() {
       <div className=" md:px-56 p-4  flex flex-col h-screen w-full md:gap-20 gap-10 ">
         <div className="flex md:flex-row flex-col w-full justify-center md:justify-between gap-10 ">
           <img
-            src="/image.png"
-            alt="working-on-desk"
+            src="/houses.gif"
+            alt="house-animation"
             className=" cursor-pointer rounded-2lg h-100 "
           />
           <div className="flex flex-col p-5 gap-10">
