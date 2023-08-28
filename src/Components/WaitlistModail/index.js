@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal, Box } from "@mui/material";
-import Button from "../Button";
 import {
   RiFacebookBoxFill,
   RiLinkedinFill,
   RiTwitterFill,
 } from "react-icons/ri";
+import toast from "react-hot-toast";
+import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
+
 export default function WaitlistModal(props) {
   const style = {
     position: "absolute",
@@ -16,27 +18,13 @@ export default function WaitlistModal(props) {
     boxShadow: 24,
     p: 4,
   };
-  const [errors, setErrors] = useState("");
-  const handleError = (error, input) => {
-    setErrors((prevState) => ({ ...prevState, [input]: error }));
-  };
-  const handleInvite = () => {};
-  const [email, setEmail] = useState("");
 
-  const validate = async () => {
-    let isValid = true;
-    if (!email) {
-      handleError("Please input your email", "email");
-      isValid = false;
-    } else if (!email.match(/\S+@\S+\.\S+/)) {
-      handleError("Please input a valid email", "email");
-      isValid = false;
-    }
-
-    if (isValid) {
-      handleInvite();
-    }
-  };
+  const { loading, error, success, message, handleSubmit } = useMailChimpForm(
+    process.env.REACT_APP_MAILCHIMP_URL
+  );
+  const { fields, handleFieldChange } = useFormFields({
+    EMAIL: "",
+  });
 
   const handleTwitter = () => {
     window.open(
@@ -53,6 +41,7 @@ export default function WaitlistModal(props) {
   const handleLinkedIn = () => {
     window.open("https://www.linkedin.com/company/homey-pm/", "_blank");
   };
+
   return (
     <Modal
       open={props.isOpen}
@@ -74,27 +63,36 @@ export default function WaitlistModal(props) {
           transition: "0.4s ease-in",
         }}
       >
-        <div className="w-full   card flex flex-row justify-start items-center">
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+
+            handleSubmit(fields);
+
+            {
+              error && toast.error(message);
+            }
+            {
+              success && toast.success(message);
+            }
+          }}
+          className="w-full   card flex flex-row justify-start items-center"
+        >
           <input
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            className="w-full  ml-2 focus:outline-none border-none h-[40px]"
+            id="EMAIL"
+            autoFocus
+            type="email"
+            value={fields.EMAIL}
+            onChange={handleFieldChange}
+            className="w-full  focus:outline-none border-none h-[40px]"
             placeholder=" Enter Your Email"
             required
           />
-          <Button
-            title="Get Notified"
-            action={validate}
-            style={
-              "w-[50%] h-[40px]  bg-primary cursor-pointer hover:card  flex justify-center items-center text-white"
-            }
-          />
-        </div>
-        {errors.email && (
-          <p className="text-danger text-sm mt-1">{errors.email}</p>
-        )}
+          <button className="w-[50%] h-[40px]  bg-primary border-none cursor-pointer hover:card  flex justify-center items-center text-white">
+            Get Notified
+          </button>
+        </form>
+
         <div className="flex w-[60%] flex-row mt-5 justify-between items-center">
           <RiTwitterFill
             onClick={() => {

@@ -6,9 +6,11 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import About from "./Pages/About";
 import Controller from "./Components/Controller";
+import { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
+    <Toaster position="top-right"></Toaster>
     <Routes>
       <Route element={<Controller />}>
         <Route path="/" element={<LandingPage />} />
