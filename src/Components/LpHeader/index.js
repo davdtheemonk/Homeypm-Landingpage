@@ -16,7 +16,7 @@ export default function LpHeader(props) {
         alt="logo"
         className="cursor-pointer md:w-[170px] md:h-[90px] w-[120px] h-[70px]"
       />
-      <div className="hidden md:flex  ml-20 justify-evenly align-center ">
+      <div className="hidden md:flex  ml-20 mr-10 justify-evenly align-center ">
         <Tooltip title="Coming Soon">
           <p className="cursor-pointer hover:text-blue text-white text-[20px] font-[500] font-[22px]">
             Products
@@ -50,7 +50,7 @@ export default function LpHeader(props) {
         title="Join Waitlist"
         action={props.handleOpenModal}
         style={
-          "hidden md:flex ml-auto h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+          "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
         }
       />
       <div className="md:hidden text-white ml-auto flex justify-center items-center">

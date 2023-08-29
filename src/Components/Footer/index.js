@@ -1,8 +1,28 @@
 import React from "react";
 import FooterCard from "../FooterCard";
 import { useNavigate } from "react-router-dom";
-
+import {
+  RiFacebookBoxFill,
+  RiLinkedinFill,
+  RiTwitterFill,
+} from "react-icons/ri";
 export default function Footer() {
+  const handleTwitter = () => {
+    window.open(
+      "https://twitter.com/homey_pm?t=JCeVDWZzLhOwvV8f8P3UQQ&s=09",
+      "_blank"
+    );
+  };
+  const handleFacebook = () => {
+    window.open(
+      "https://www.facebook.com/profile.php?id=61550504325075",
+      "_blank"
+    );
+  };
+  const handleLinkedIn = () => {
+    window.open("https://www.linkedin.com/company/homey-pm/", "_blank");
+  };
+
   const navigate = useNavigate();
   const cards = [
     {
@@ -11,7 +31,6 @@ export default function Footer() {
       links: [
         { title: "About", url: "/about" },
         { title: "Blog", url: "/" },
-        { title: "Status", url: "/" },
         { title: "Team", url: "/" },
       ],
     },
@@ -20,7 +39,7 @@ export default function Footer() {
       title: "Products",
       links: [
         { title: "Property Management", url: "/" },
-        { title: "CRM", url: "/" },
+        { title: "Customer Relationship Manager", url: "/" },
         { title: "Rent Collector Link", url: "/" },
       ],
     },
@@ -35,7 +54,7 @@ export default function Footer() {
     },
   ];
   return (
-    <div className=" min-h-[100px] md:px-56 p-4 flex  bg-darkblue md:flex-row flex-col md:justify-between ">
+    <div className=" min-h-[100px] lg:px-56 md:px-auto p-4 flex  bg-darkblue md:flex-row flex-col md:justify-between ite-center  ">
       <img
         src="/logo1.png"
         onClick={() => {
@@ -47,6 +66,29 @@ export default function Footer() {
       {cards.map((card) => (
         <FooterCard key={card.id} item={card} />
       ))}
+      <div className="flex flex-col justify-start  items-start w-40 p-4 gap-5 ">
+        <p className="text-white text-[500]">Socials</p>
+        <div className="flex w-full flex-row justify-between mb-auto items-center">
+          <RiTwitterFill
+            onClick={() => {
+              handleTwitter();
+            }}
+            className="text-grey hover:text-white  text-2xl cursor-pointer"
+          />
+          <RiFacebookBoxFill
+            onClick={() => {
+              handleFacebook();
+            }}
+            className="text-grey hover:text-white  text-2xl cursor-pointer"
+          />
+          <RiLinkedinFill
+            onClick={() => {
+              handleLinkedIn();
+            }}
+            className="text-grey hover:text-white text-2xl cursor-pointer"
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import LpSection from "../../Components/LpSection";
 import WaitlistModal from "../../Components/WaitlistModail";
 
-
 export default function LandingPage() {
   const [isOpen, openModal] = useState(false);
   const closeModal = () => {
@@ -12,7 +11,7 @@ export default function LandingPage() {
     openModal(true);
   };
   return (
-    <div className=" flex flex-col h-screen w-full  z-4 gradient ">
+    <div className=" flex flex-col h-full w-full  z-4 gradient ">
       <LpSection handleOpenModal={handleOpenModal} />
       <WaitlistModal isOpen={isOpen} closeModal={closeModal} />
     </div>
