@@ -43,6 +43,7 @@ export default function SideMenu(props) {
           <p
             onClick={() => {
               navigate("/about");
+              props.toggleDrawer(false);
             }}
             className={`cursor-pointer  ${
               location.includes("about") ? "text-secondary" : "text-dark"
@@ -62,6 +63,7 @@ export default function SideMenu(props) {
           <p
             onClick={() => {
               props.handleOpenTeamModal();
+              props.toggleDrawer(false);
             }}
             className=" cursor-pointer text-dark text-[20px]  font-[500] hover:text-secondary"
           >

@@ -85,7 +85,7 @@ export default function Roles() {
     },
   ];
   return (
-    <div className="flex flex-col justify-start   w-full items-start rounded-md gap-5   mb-16">
+    <div className="flex flex-col justify-start   w-full items-start rounded-md gap-20   mb-16">
       <div className="flex m-auto w-full gap-5 flex-col">
         <p className="font-[500] text-4xl">Services we offer</p>
         <div className="grid md:grid-cols-2 gap-10">
