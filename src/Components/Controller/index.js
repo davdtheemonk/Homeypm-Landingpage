@@ -4,6 +4,7 @@ import WaitlistModal from "../WaitlistModail";
 import Team from "../Team";
 import { Outlet } from "react-router-dom";
 import SideMenu from "../SideMenu";
+import Footer from "../Footer";
 export default function Controller() {
   const [isOpen, openModal] = useState(false);
   const [drawerState, toggleDrawer] = useState(false);
@@ -25,7 +26,7 @@ export default function Controller() {
     openTeamModal(true);
   };
   return (
-    <div className="">
+    <div className="relative">
       <LpHeader
         handleOpenModal={handleOpenModal}
         handleOpenTeamModal={handleOpenTeamModal}
@@ -40,6 +41,7 @@ export default function Controller() {
         drawerState={drawerState}
       />
       <Outlet handleOpenModal={handleOpenModal} />
+      <Footer />
     </div>
   );
 }

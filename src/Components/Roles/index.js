@@ -71,14 +71,21 @@ export default function Roles() {
     },
     {
       id: 6,
-      logo: "./transaction.gif",
+      logo: "./intergrations.gif",
       title: "Intergrations",
       description:
-        "Integrations are the key to unlocking an enhanced property management experience. Homey's integration capabilities empower property managers to work smarter, not harder. Whether you're enhancing communication, optimizing marketing efforts, or ensuring financial accuracy, Homey ensures that your property management operations are cohesive and efficient.",
+        "Integrations are the key to unlocking an enhanced property management experience. Homey's integration capabilities empower property managers to work smarter, not harder. Whether you're enhancing communication, optimizing marketing efforts, or ensuring financial accuracy, Homey ensures that your property management operations are cohesive and efficient",
+    },
+    {
+      id: 7,
+      logo: "./crm.gif",
+      title: "Customer Relationship Management",
+      description:
+        "Homey's advanced CRM service is the backbone of seamless and personalized property management. Designed to strengthen relationships with tenants, owners, and vendors, our CRM empowers property managers with a centralized hub for communications and interactions. Stay organized by managing leads, prospects, and current tenants in one place. Engage with automated follow-ups, track communications history, and gain insights into tenant preferences for more tailored interactions. With Homey's CRM, you'll effortlessly nurture relationships, deliver exceptional experiences, and elevate your property management to new heights.",
     },
   ];
   return (
-    <div className="flex flex-col justify-start  h-full w-full items-start rounded-md gap-5  ">
+    <div className="flex flex-col justify-start   w-full items-start rounded-md gap-5   mb-16">
       <div className="flex m-auto w-full gap-5 flex-col">
         <p className="font-[500] text-4xl">Services we offer</p>
         <div className="grid md:grid-cols-2 gap-10">

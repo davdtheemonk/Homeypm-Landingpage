@@ -7,7 +7,7 @@ export default function LpHeader(props) {
   const navigate = useNavigate();
   const location = window.location.pathname;
   return (
-    <div className="fixed gradient top-0 left-0 z-10 flex w-full  md:px-44 p-4 justify-start items-center flex-row">
+    <div className="fixed gradient top-0 left-0 z-10 flex w-full lg:px-56 md:px-auto p-4 justify-start items-center flex-row">
       <img
         onClick={() => {
           navigate("/");
@@ -50,7 +50,7 @@ export default function LpHeader(props) {
         title="Join Waitlist"
         action={props.handleOpenModal}
         style={
-          "hidden md:flex ml-auto h-[50px]  w-40  bg-darkblue  text-white cursor-pointer font-[500] hover:card rounded-md flex justify-center items-center "
+          "hidden md:flex ml-auto h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
         }
       />
       <div className="md:hidden text-white ml-auto flex justify-center items-center">

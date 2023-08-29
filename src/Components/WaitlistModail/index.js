@@ -48,9 +48,11 @@ export default function WaitlistModal(props) {
       onClose={props.closeModal}
       disableAutoFocus={true}
       aria-labelledby="modal-modal-title"
+      className="w-full h-screen overflow-hidden"
       aria-describedby="modal-modal-description"
       sx={{
         p: 2,
+
         bgcolor: "rgba(0,0,0,0.2)",
         backdropFilter: "blur(4px)",
         transition: "0.5s ease-out",
@@ -82,6 +84,7 @@ export default function WaitlistModal(props) {
             id="EMAIL"
             autoFocus
             type="email"
+            name="EMAIL"
             value={fields.EMAIL}
             onChange={handleFieldChange}
             className="w-full  focus:outline-none border-none h-[40px]"
