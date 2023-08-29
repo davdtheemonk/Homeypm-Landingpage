@@ -23,7 +23,7 @@ export default function About() {
     window.open("https://www.linkedin.com/company/homey-pm/", "_blank");
   };
   return (
-    <div className="flex flex-col h-full w-full gap-10 ">
+    <div className="flex flex-col h-full w-full gap-5">
       <div
         id="top"
         className=" md:px-56 p-4  relative  gradient md:mt-28 mt-24  flex justify-center items-center "
@@ -75,9 +75,9 @@ export default function About() {
           <img
             src="/houses.gif"
             alt="house-animation"
-            className=" cursor-pointer rounded-2lg h-96 rounded-lg "
+            className=" cursor-pointer rounded-2lg h-80 rounded-lg "
           />
-          <div className="flex flex-col gap-10 md:m-auto">
+          <div className="flex flex-col gap-5 md:m-auto">
             <p className="font-bold text-4xl text-dark text-start">
               Empower Your Property Management Journey with Homey: Streamline,
               Optimize, Succeed
