@@ -2,7 +2,7 @@ import React from "react";
 
 export default function BeforeandNow() {
   return (
-    <div className="  w-full flex  justify-center lg:px-56 md:px-auto p-10 items-center h-full  flex-col bg-white ">
+    <div className="  w-full flex  justify-center lg:px-56 md:px-auto p-10 mt-42 items-center h-full  flex-col bg-white ">
       <p className=" py-10 text-3xl">Before</p>
       <div className="grid md:grid-cols-6 grid-cols-3 w-full gap-5">
         <div className="flex flex-col justify-center items-center gap-4">
