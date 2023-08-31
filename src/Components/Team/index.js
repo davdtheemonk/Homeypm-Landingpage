@@ -32,7 +32,7 @@ export default function Team(props) {
           transition: "0.5s ease-in",
         }}
       >
-        <p className="font-bold text-2xl text-white">Team</p>
+        <p className="font-bold text-2xl text-white">Meet the team</p>
         <div className="w-full   flex md:flex-row flex-col justify-evenly items-center">
           <div className="flex flex-col justify-center items-center p-2  ">
             <img
@@ -41,7 +41,7 @@ export default function Team(props) {
               className="w-[100px] h-[100px] rounded-full mb-2"
             />
             <p className="font-bold text-white mb-1">David Mugalla</p>
-            <p className="text-gray">Founder/Lead Developer</p>
+            <p className="text-gray">Co-Founder/CEO</p>
           </div>
           <div className="flex flex-col justify-center items-center p-2">
             <img
@@ -50,7 +50,7 @@ export default function Team(props) {
               className="w-[100px] h-[100px] rounded-full mb-2"
             />
             <p className="font-bold text-white mb-1">O. Maxwell Gad</p>
-            <p className="text-gray">Co-Founder/Product Lead</p>
+            <p className="text-gray">Co-Founder/COO</p>
           </div>
         </div>
       </Box>
