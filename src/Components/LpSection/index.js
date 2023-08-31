@@ -3,7 +3,7 @@ import Button from "../Button";
 import MovingText from "react-moving-text";
 export default function LpSection(props) {
   return (
-    <div className="  w-full flex  md:justify-center lg:px-56 md:px-auto md:h-screen min-h-[60%] p-10  mt-20 items-center gap-7 flex-col ">
+    <div className="  w-full flex   lg:px-56 md:px-auto md:h-screen min-h-[60%] p-10  mt-20 items-center gap-7 flex-col ">
       <div className="mt-10 md:w-[50%] flex flex-col gap-5 ">
         <MovingText
           type="flipFromTop"
