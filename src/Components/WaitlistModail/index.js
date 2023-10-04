@@ -71,14 +71,14 @@ export default function WaitlistModal(props) {
 
             handleSubmit(fields);
 
-            {
-              error && toast.error(message);
+            if (error) {
+              toast.error(message);
             }
-            {
-              success && toast.success(message);
+            if (success) {
+              toast.success(message);
             }
           }}
-          className="w-full   card flex flex-row justify-start items-center"
+          className="w-full card flex flex-row justify-start items-center"
         >
           <input
             id="EMAIL"
