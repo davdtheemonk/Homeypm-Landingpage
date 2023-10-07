@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Tooltip } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 export default function LpHeader(props) {
   const navigate = useNavigate();
   const location = window.location.pathname;
@@ -18,33 +18,31 @@ export default function LpHeader(props) {
       />
       <div className="hidden md:flex  ml-20 mr-10 justify-evenly align-center ">
         <Tooltip title="Coming Soon">
-          <p className="cursor-pointer hover:text-blue text-white text-[20px] font-[500] font-[22px]">
+          <Link className="cursor-pointer hover:text-blue text-white text-[20px] font-[500] font-[22px]">
             Products
-          </p>
+          </Link>
         </Tooltip>
-        <p
-          onClick={() => {
-            navigate("/about");
-          }}
+        <Link
+          to="/about"
           className={`cursor-pointer  ${
             location.includes("about") ? "text-secondary" : "text-white"
           } text-[20px]  ml-10 font-[500] hover:text-blue`}
         >
           About
-        </p>
+        </Link>
         <Tooltip title="Coming Soon">
-          <p className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue">
+          <Link className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue">
             Pricing
-          </p>
+          </Link>
         </Tooltip>
-        <p
+        <Link
           onClick={() => {
             props.handleOpenTeamModal();
           }}
           className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue"
         >
           Team
-        </p>
+        </Link>
       </div>
       <Button
         title="Join Waitlist"
