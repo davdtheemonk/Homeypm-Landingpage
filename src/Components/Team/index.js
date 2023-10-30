@@ -54,7 +54,7 @@ export default function Team(props) {
           </div>
           <div className="flex flex-col justify-center items-center p-2">
             <img
-              src="/Kalutu.jpg"
+              src="/kalutu.jpg"
               alt="Founding Engineer - Dan"
               className="w-[100px] h-[100px] rounded-full mb-2"
             />
