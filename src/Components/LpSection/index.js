@@ -19,9 +19,9 @@ export default function LpSection(props) {
           </p>
         </MovingText>
 
-        <p className="text-white text-center md:text-[22px] ">
-          Monitor realtime cashflow, streamline accounting and perform sales on
-          the go.
+        <p className="text-white text-center md:text-[22px] w-[70%] m-auto">
+          An end-to-end platform building a bridge between property
+          owners,tenants and vendors.
         </p>
       </div>
       <div className="w-full flex justify-center  items-center">

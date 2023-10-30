@@ -38,9 +38,9 @@ export default function Footer() {
       id: 1,
       title: "Products",
       links: [
-        { title: "Property Management", url: "/" },
-        { title: "Customer Relationship Manager", url: "/" },
-        { title: "Rent Collector Link", url: "/" },
+        { title: "Property Managers", url: "/" },
+        { title: "Tenants", url: "/" },
+        { title: "Vendors", url: "/" },
       ],
     },
     {

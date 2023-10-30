@@ -26,7 +26,7 @@ export default function Team(props) {
       }}
     >
       <Box
-        className="md:w-[450px] md:h-[240px] h-[400px] w-[90%] flex flex-col justify-center items-center"
+        className="md:w-[650px] md:h-[240px] h-[600px] w-[90%] flex flex-col justify-center items-center"
         sx={{
           ...style,
           transition: "0.5s ease-in",
@@ -51,6 +51,15 @@ export default function Team(props) {
             />
             <p className="font-bold text-white mb-1">O. Maxwell Gad</p>
             <p className="text-gray">Co-Founder/COO</p>
+          </div>
+          <div className="flex flex-col justify-center items-center p-2">
+            <img
+              src="/Kalutu.jpg"
+              alt="Founding Engineer - Dan"
+              className="w-[100px] h-[100px] rounded-full mb-2"
+            />
+            <p className="font-bold text-white mb-1">Daniel Kalutu</p>
+            <p className="text-gray">Founding Engineer</p>
           </div>
         </div>
       </Box>

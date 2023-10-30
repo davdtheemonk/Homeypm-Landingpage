@@ -3,7 +3,7 @@ import React from "react";
 export default function BeforeandNow() {
   return (
     <div className="  w-full flex  justify-center lg:px-56 md:px-auto p-10 mt-42 items-center h-full  flex-col bg-white ">
-      <p className=" py-10 text-3xl">Before</p>
+      <p className=" text-2xl font-[500]">Before</p>
       <div className="grid md:grid-cols-6 grid-cols-3 w-full gap-5">
         <div className="flex flex-col justify-center items-center gap-4">
           <div className="rounded-full flex justify-center  md:w-[90px] md:h-[90px] w-[70px] h-[70px] items-center shadow-md">
@@ -66,9 +66,10 @@ export default function BeforeandNow() {
           <p className="text-grey md:text-xl text-md">Communication</p>
         </div>
       </div>
-      <p className=" py-10 text-3xl">Now</p>
+      <p className=" text-2xl font-[500] py-5">Now</p>
+
       <div className="flex flex-col justify-center items-center gap-4">
-        <div className="rounded-md card flex justify-center  w-[160px] h-[160px] items-center ">
+        <div className="rounded-full translate-y-2 card flex justify-center  w-[160px] h-[160px] items-center ">
           <img
             src="/logo1.png"
             alt="gmail"
