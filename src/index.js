@@ -7,6 +7,8 @@ import LandingPage from "./Pages/LandingPage";
 import About from "./Pages/About";
 import Controller from "./Components/Controller";
 import { Toaster } from "react-hot-toast";
+import Blog from "./Pages/Blog";
+import Template from "./Pages/Template";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -15,6 +17,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route element={<Controller />}>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Template />} />
       </Route>
     </Routes>
   </BrowserRouter>

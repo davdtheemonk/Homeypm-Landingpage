@@ -43,6 +43,12 @@ export default function LpHeader(props) {
         >
           Team
         </Link>
+        <Link
+          to="/blog"
+          className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue"
+        >
+          Blog
+        </Link>
       </div>
       <Button
         title="Join Waitlist"
