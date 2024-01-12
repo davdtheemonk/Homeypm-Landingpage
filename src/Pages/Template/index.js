@@ -15,7 +15,6 @@ export default function Template(props) {
   const [writer, setWriter] = useState("");
   const [img, setPhotosResponse] = useState(null);
   const { id } = useParams();
-  console.log(process.env.REACT_APP_UNSPLASH);
   const getData = async () => {
     await axios
       .get(
