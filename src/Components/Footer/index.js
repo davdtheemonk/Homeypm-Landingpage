@@ -30,7 +30,7 @@ export default function Footer() {
       title: "Company",
       links: [
         { title: "About", url: "/about" },
-        { title: "Blog", url: "/" },
+        { title: "Blog", url: "/blog" },
         { title: "Team", url: "/" },
       ],
     },

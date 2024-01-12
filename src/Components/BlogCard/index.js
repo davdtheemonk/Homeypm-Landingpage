@@ -1,15 +1,28 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { api } from "../../unsplash";
 export default function BlogCard(props) {
+  const [img, setPhotosResponse] = useState(null);
+  api.photos
+    .get({ photoId: `${props.item.image.replaceAll('"', "")}` })
+    .then((result) => {
+      setPhotosResponse(result.response.urls.raw);
+    })
+    .catch((err) => {
+      console.log("something went wrong!");
+    });
+
   return (
     <div
       onClick={() => {
-        window.open("blog/" + props.item.link, "_self");
+        const url = `/blog/${props.item.title
+          .replace(/"/g, "")
+          .replace(/\s+/g, "-")}`;
+        window.location = url;
       }}
       className="w-[300px] flex flex-col justify-start items-start cursor-pointer "
     >
       <img
-        src={props.item.image}
+        src={img}
         className="w-full h-[200px] hover:shadow-xl"
         alt="blog-cover"
       />
@@ -20,10 +33,10 @@ export default function BlogCard(props) {
               ? "/david.jpeg"
               : props.item.writer === "Daniel Kalutu"
               ? "/kalutu.jpg"
-              : props.item.writer === "James Mweni"
-              ? "/jmweni.jpg"
+              : props.item.writer === "James Thaura"
+              ? "/jmweni.jpeg"
               : props.item.writer === "Maxwell Gad"
-              ? "max.jpeg"
+              ? "/max.jpeg"
               : ""
           }
           alt="avatar"
@@ -31,9 +44,9 @@ export default function BlogCard(props) {
         />
         <div className="flex flex-col items-start justify-center gap-1">
           <p className="font-bold">{props.item.title}</p>
-          <p className="text-sm">13-05-2024</p>
+          <p className="text-sm">{props.item.date}</p>
           <p className="text-sm text-grey">
-            {props.item.description.slice(0, 100)}...
+            {props.item.post.replace(/<\/?[^>]+(>|$)/g, "").slice(0, 100)}...
           </p>
         </div>
       </div>
