@@ -46,7 +46,6 @@ export default function Template(props) {
     })
     .catch((err) => {
       console.log(err);
-      console.log("something went wrong!");
     })
     .finally(() => {
       setLoader(false);

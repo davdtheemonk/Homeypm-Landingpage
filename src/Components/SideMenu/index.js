@@ -70,6 +70,24 @@ export default function SideMenu(props) {
             Team
           </p>
         </li>
+        <li>
+          <Tooltip title="Coming Soon">
+            <p className="cursor-pointer hover:text-secondary text-dark text-[20px] font-[500] font-[22px]">
+              Pricing
+            </p>
+          </Tooltip>
+        </li>
+        <li>
+          <p
+            onClick={() => {
+              navigate("/blog");
+              props.toggleDrawer(false);
+            }}
+            className=" cursor-pointer text-dark text-[20px]  font-[500] hover:text-secondary"
+          >
+            Blog
+          </p>
+        </li>
       </ul>
     </SwipeableDrawer>
   );
