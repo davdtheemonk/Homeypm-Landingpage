@@ -1,4 +1,3 @@
-import React, { Fragment, useEffect, useState } from "react";
 import { createApi } from "unsplash-js";
 
 const api = createApi({

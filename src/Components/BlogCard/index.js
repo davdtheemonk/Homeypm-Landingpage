@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+import "dayjs/locale/en";
 import React, { useState } from "react";
 import { api } from "../../unsplash";
 export default function BlogCard(props) {
@@ -44,7 +46,9 @@ export default function BlogCard(props) {
         />
         <div className="flex flex-col items-start justify-center gap-1">
           <p className="font-bold">{props.item.title}</p>
-          <p className="text-sm">{props.item.date}</p>
+          <p className="text-sm">
+            {dayjs(props.item.date).format("ddd MMM DD, YYYY")}
+          </p>
           <p className="text-sm text-grey">
             {props.item.post.replace(/<\/?[^>]+(>|$)/g, "").slice(0, 100)}...
           </p>

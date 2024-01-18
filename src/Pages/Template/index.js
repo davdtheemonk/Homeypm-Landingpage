@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+import "dayjs/locale/en";
 import { Facebook, LinkedIn, LockClock, Twitter } from "@mui/icons-material";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
@@ -15,6 +17,7 @@ export default function Template(props) {
   const [writer, setWriter] = useState("");
   const [img, setPhotosResponse] = useState(null);
   const { id } = useParams();
+
   const getData = async () => {
     await axios
       .get(
@@ -24,7 +27,7 @@ export default function Template(props) {
         )}`
       )
       .then((res) => {
-        setDate(res.data[0].date);
+        setDate(dayjs(res.data[0].date).format("ddd MMM DD, YYYY"));
         setTitle(res.data[0].title);
         setTimeToRead(res.data[0].timetoread);
         setPost(res.data[0].post);
@@ -34,9 +37,6 @@ export default function Template(props) {
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        setLoader(false);
       });
   };
   api.photos
@@ -60,7 +60,7 @@ export default function Template(props) {
           <img src="/loader.gif" width="200px" alt="loader" />
         </div>
       ) : (
-        <div className="flex md:flex-row flex-col items-start justify-start md:h-screen h-full md:px-10  mt-32 p-5">
+        <div className="flex md:flex-row flex-col items-start justify-start md:min-h-screen h-full md:px-10  mt-32 p-5">
           <div>
             <p className="mt-4 font-bold text-xl">
               {title.replaceAll('"', "")}
@@ -84,12 +84,12 @@ export default function Template(props) {
               />
               <div className="flex flex-col">
                 <p className="text-grey text-sm">
-                  Posted by <u>{writer}</u> on {date.replaceAll('"', "")}
+                  Published by <u>{writer}</u> on {date.replaceAll('"', "")}
                 </p>
                 <div className="flex justify-start items-center align-center gap-2 flex-row">
                   <LockClock />
                   <p className="text-grey text-sm">
-                    {timetoread.replaceAll('"', "")} read *{" "}
+                    {timetoread.replaceAll('"', "")} read ·{" "}
                     {location.replaceAll('"', "")}
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export default function Template(props) {
             </div>
             <img
               alt="cover"
-              className="md:w-[60%] w-[100%] shadow-md md:mx-0 mx-auto flex mt-4 "
+              className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex mt-4 "
               src={img}
             />
             <div className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex  mb-20 ">
@@ -134,9 +134,22 @@ export default function Template(props) {
                   development. Connect with him below.
                 </p>
                 <div className="flex flex-row justify-center items-center  mt-6 gap-4">
-                  <Facebook></Facebook>
-                  <Twitter />
-                  <LinkedIn />
+                  <Facebook className="cursor-pointer"></Facebook>
+                  <Twitter
+                    onClick={() => {
+                      window.open("https://twitter.com/dev_dave1", "_blank");
+                    }}
+                    className="cursor-pointer"
+                  />
+                  <LinkedIn
+                    onClick={() => {
+                      window.open(
+                        "https://www.linkedin.com/in/david-mugalla-198149215/",
+                        "_blank"
+                      );
+                    }}
+                    className="cursor-pointer"
+                  />
                 </div>
               </>
             )}
@@ -148,9 +161,33 @@ export default function Template(props) {
                   developing startups. Connect with him below
                 </p>
                 <div className="flex flex-row justify-center items-center  mt-6 gap-4">
-                  <Facebook></Facebook>
-                  <Twitter />
-                  <LinkedIn />
+                  <Facebook
+                    className="cursor-pointer"
+                    onClick={() => {
+                      window.open(
+                        "https://www.facebook.com/gmo.owino",
+                        "_blank"
+                      );
+                    }}
+                  ></Facebook>
+                  <Twitter
+                    onClick={() => {
+                      window.open(
+                        "https://x.com/maxwell_gad?t=d524CoJcOh4xngAkN0bQZA&s=09",
+                        "_blank"
+                      );
+                    }}
+                    className="cursor-pointer"
+                  />
+                  <LinkedIn
+                    onClick={() => {
+                      window.open(
+                        "https://www.linkedin.com/in/omaxwellgad?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                        "_blank"
+                      );
+                    }}
+                    className="cursor-pointer"
+                  />
                 </div>
               </>
             )}
@@ -162,9 +199,9 @@ export default function Template(props) {
                   development.Connect with him below.
                 </p>
                 <div className="flex flex-row justify-center items-center  mt-6 gap-4">
-                  <Facebook></Facebook>
-                  <Twitter />
-                  <LinkedIn />
+                  <Facebook className="cursor-pointer"></Facebook>
+                  <Twitter className="cursor-pointer" />
+                  <LinkedIn className="cursor-pointer" />
                 </div>
               </>
             )}
@@ -176,9 +213,25 @@ export default function Template(props) {
                   execution. Connect with him below.
                 </p>
                 <div className="flex flex-row justify-center items-center  mt-6 gap-4">
-                  <Facebook></Facebook>
-                  <Twitter />
-                  <LinkedIn />
+                  <Facebook className="cursor-pointer"></Facebook>
+                  <Twitter
+                    className="cursor-pointer"
+                    onClick={() => {
+                      window.open(
+                        "https://x.com/thisthaura?t=yCyY819Sk-a9-ZNVsdXUSQ&s=09",
+                        "_blank"
+                      );
+                    }}
+                  />
+                  <LinkedIn
+                    className="cursor-pointer"
+                    onClick={() => {
+                      window.open(
+                        "https://www.linkedin.com/in/jamesthaura",
+                        "_blank"
+                      );
+                    }}
+                  />
                 </div>
               </>
             )}
