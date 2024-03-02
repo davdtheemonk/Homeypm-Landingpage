@@ -24,11 +24,18 @@ export default function LpSection(props) {
           owners,tenants and vendors.
         </p>
       </div>
-      <div className="w-full flex justify-center  items-center">
+      <div className="w-full flex justify-center  items-center flex-col gap-4">
+        <Button
+          title="Request Demo"
+          action={props.scheduleDemo}
+          style={
+            "md:hidden block h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+          }
+        />
         <Button
           title="Join Waitlist"
           action={props.handleOpenModal}
-          style=" h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+          style=" md:hidden block h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
         />
       </div>
 

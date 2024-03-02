@@ -50,13 +50,22 @@ export default function LpHeader(props) {
           Blog
         </Link>
       </div>
-      <Button
-        title="Join Waitlist"
-        action={props.handleOpenModal}
-        style={
-          "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
-        }
-      />
+      <div className="flex flex-row justfiy-center items-center gap-6 md:ml-auto">
+        <Button
+          title="Request Demo"
+          action={props.scheduleDemo}
+          style={
+            "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+          }
+        />
+        <Button
+          title="Join Waitlist"
+          action={props.handleOpenModal}
+          style={
+            "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+          }
+        />
+      </div>
       <div className="md:hidden text-white ml-auto flex justify-center items-center">
         <MenuIcon
           onClick={() => {

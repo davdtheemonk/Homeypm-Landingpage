@@ -12,10 +12,20 @@ export default function LandingPage() {
   const handleOpenModal = () => {
     openModal(true);
   };
+  const scheduleDemo = () => {
+    window.open("https://calendly.com/mugalladave/homey-demo", "_self");
+  };
   return (
     <div className=" flex flex-col h-full w-full  z-4 gradient ">
-      <LpSection handleOpenModal={handleOpenModal} />
-      <WaitlistModal isOpen={isOpen} closeModal={closeModal} />
+      <LpSection
+        handleOpenModal={handleOpenModal}
+        scheduleDemo={scheduleDemo}
+      />
+      <WaitlistModal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        scheduleDemo={scheduleDemo}
+      />
       <Stakeholders />
       <BeforeandNow />
     </div>
