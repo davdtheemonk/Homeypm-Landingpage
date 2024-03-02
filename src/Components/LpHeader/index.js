@@ -6,6 +6,9 @@ import { useNavigate, Link } from "react-router-dom";
 export default function LpHeader(props) {
   const navigate = useNavigate();
   const location = window.location.pathname;
+  const scheduleDemo = () => {
+    window.open("https://calendly.com/mugalladave/homey-demo", "_self");
+  };
   return (
     <div className="fixed gradient top-0 left-0 z-10 flex w-full lg:px-56 md:px-auto p-4 justify-start items-center flex-row">
       <img
@@ -53,7 +56,7 @@ export default function LpHeader(props) {
       <div className="flex flex-row justfiy-center items-center gap-6 md:ml-auto">
         <Button
           title="Request Demo"
-          action={props.scheduleDemo}
+          action={scheduleDemo}
           style={
             "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
           }
