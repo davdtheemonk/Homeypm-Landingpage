@@ -30,7 +30,7 @@ export default function Template(props) {
         setDate(dayjs(res.data[0].date).format("ddd MMM DD, YYYY"));
         setTitle(res.data[0].title);
         setTimeToRead(res.data[0].timetoread);
-        setPost(res.data[0].post);
+        setPost(res.data[0].post.replaceAll('"', ""));
         setWriter(res.data[0].writer);
         setLocation(res.data[0].location);
         setImage(res.data[0].image);
@@ -61,6 +61,16 @@ export default function Template(props) {
         </div>
       ) : (
         <div className="flex md:flex-row flex-col items-start justify-start md:min-h-screen h-full md:px-10  mt-32 p-5">
+          <head>
+            <meta charset="UTF-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
+            <title>{title}</title>
+            <meta property="og:title" content={title} />
+            <meta property="og:image" content={"/logo.png"} />
+          </head>
           <div>
             <p className="mt-4 font-bold text-xl">
               {title.replaceAll('"', "")}
@@ -69,13 +79,13 @@ export default function Template(props) {
             <div className="flex justify-start items-center align-center gap-2 flex-row mt-4">
               <img
                 src={
-                  writer === "David Mugalla"
+                  writer.replaceAll('"', "") === "David Mugalla"
                     ? "/david.jpeg"
-                    : writer === "Daniel Kalutu"
+                    : writer.replaceAll('"', "") === "Daniel Kalutu"
                     ? "/kalutu.jpg"
-                    : writer === "James Thaura"
+                    : writer.replaceAll('"', "") === "James Thaura"
                     ? "/jmweni.jpeg"
-                    : writer === "Maxwell Gad"
+                    : writer.replaceAll('"', "") === "Maxwell Gad"
                     ? "/max.jpeg"
                     : ""
                 }
@@ -102,9 +112,10 @@ export default function Template(props) {
             />
             <div className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex  mb-20 ">
               <p
-                className="mt-10"
+                className="mt-10 py-2"
+                style={{ width: "100%" }}
                 dangerouslySetInnerHTML={{
-                  __html: post.replace(/^"(.*)"$/, "$1"),
+                  __html: post.replace(/\\n/g, "<br>"),
                 }}
               ></p>
             </div>
@@ -113,25 +124,25 @@ export default function Template(props) {
             <p className="text-center mb-4 font-bold">About author</p>
             <img
               src={
-                writer === "David Mugalla"
+                writer.replaceAll('"', "") === "David Mugalla"
                   ? "/david.jpeg"
-                  : writer === "Daniel Kalutu"
+                  : writer.replaceAll('"', "") === "Daniel Kalutu"
                   ? "/kalutu.jpg"
                   : writer === "James Thaura"
                   ? "/jmweni.jpeg"
-                  : writer === "Maxwell Gad"
+                  : writer.replaceAll('"', "") === "Maxwell Gad"
                   ? "/max.jpeg"
                   : ""
               }
               alt="avatar"
               className="w-32  rounded-full mx-auto "
             />
-            {writer === "David Mugalla" && (
+            {writer.replaceAll('"', "") === "David Mugalla" && (
               <>
                 <p className="mt-4 text-center text-sm ">
-                  <b>{writer}</b> is a passionate software engineer and is
-                  currently the co-founder and CEO of Homey heading growth and
-                  development. Connect with him below.
+                  <b>{writer.replaceAll('"', "")}</b> is a passionate software
+                  engineer and is currently the co-founder and CEO of Homey
+                  heading growth and development. Connect with him below.
                 </p>
                 <div className="flex flex-row justify-center items-center  mt-6 gap-4">
                   <Facebook className="cursor-pointer"></Facebook>
@@ -153,7 +164,7 @@ export default function Template(props) {
                 </div>
               </>
             )}
-            {writer === "Maxwell Gad" && (
+            {writer.replaceAll('"', "") === "Maxwell Gad" && (
               <>
                 <p className="mt-4 text-center text-sm ">
                   <b>O.Maxwell Gad</b> is the co-founder and COO of Homey. He
@@ -191,7 +202,7 @@ export default function Template(props) {
                 </div>
               </>
             )}
-            {writer === "Daniel Kalutu" && (
+            {writer.replaceAll('"', "") === "Daniel Kalutu" && (
               <>
                 <p className="mt-4 text-center text-sm ">
                   <b>Daniel Kalutu</b> is a founding engineer at Homey. He
@@ -205,7 +216,7 @@ export default function Template(props) {
                 </div>
               </>
             )}
-            {writer === "James Thaura" && (
+            {writer.replaceAll('"', "") === "James Thaura" && (
               <>
                 <p className="mt-4 text-center text-sm ">
                   <b>James Thaura</b> is a founding engineer and Growth Hacker

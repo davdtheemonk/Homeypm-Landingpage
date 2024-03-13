@@ -50,7 +50,11 @@ export default function BlogCard(props) {
             {dayjs(props.item.date).format("ddd MMM DD, YYYY")}
           </p>
           <p className="text-sm text-grey">
-            {props.item.post.replace(/<\/?[^>]+(>|$)/g, "").slice(0, 100)}...
+            {props.item.post
+              .replaceAll('"', "")
+              .replace(/<\/?[^>]+(>|$)/g, "")
+              .slice(0, 100)}
+            ...
           </p>
         </div>
       </div>
