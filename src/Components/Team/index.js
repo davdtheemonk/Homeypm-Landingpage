@@ -36,7 +36,7 @@ export default function Team(props) {
         <div className="w-full   flex md:flex-row flex-col justify-evenly items-center">
           <div className="flex flex-col justify-center items-center p-2  ">
             <img
-              src="/david.jpeg"
+              src="/david.jpg"
               alt="founder - David"
               className="w-[100px] h-[100px] rounded-full mb-2"
             />

@@ -32,7 +32,7 @@ export default function BlogCard(props) {
         <img
           src={
             props.item.writer === "David Mugalla"
-              ? "/david.jpeg"
+              ? "/david.jpg"
               : props.item.writer === "Daniel Kalutu"
               ? "/kalutu.jpg"
               : props.item.writer === "James Thaura"

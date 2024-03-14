@@ -78,7 +78,7 @@ export default function Template(props) {
               <img
                 src={
                   writer.replaceAll('"', "") === "David Mugalla"
-                    ? "/david.jpeg"
+                    ? "/david.jpg"
                     : writer.replaceAll('"', "") === "Daniel Kalutu"
                     ? "/kalutu.jpg"
                     : writer.replaceAll('"', "") === "James Thaura"
@@ -123,7 +123,7 @@ export default function Template(props) {
             <img
               src={
                 writer.replaceAll('"', "") === "David Mugalla"
-                  ? "/david.jpeg"
+                  ? "/david.jpg"
                   : writer.replaceAll('"', "") === "Daniel Kalutu"
                   ? "/kalutu.jpg"
                   : writer === "James Thaura"
