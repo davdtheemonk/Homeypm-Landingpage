@@ -9,18 +9,22 @@ import Controller from "./Components/Controller";
 import { Toaster } from "react-hot-toast";
 import Blog from "./Pages/Blog";
 import Template from "./Pages/Template";
+import { HelmetProvider } from "react-helmet-async";
 
+const helmetContext = {};
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Toaster position="top-right"></Toaster>
-    <Routes>
-      <Route element={<Controller />}>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<Template />} />
-      </Route>
-    </Routes>
+    <HelmetProvider context={helmetContext}>
+      <Toaster position="top-right"></Toaster>
+      <Routes>
+        <Route element={<Controller />}>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<Template />} />
+        </Route>
+      </Routes>
+    </HelmetProvider>
   </BrowserRouter>
 );
 
