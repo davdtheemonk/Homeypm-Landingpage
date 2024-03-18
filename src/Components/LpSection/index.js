@@ -20,8 +20,8 @@ export default function LpSection(props) {
         </MovingText>
 
         <p className="text-white text-center md:text-[22px] w-[70%] m-auto">
-          An end-to-end platform building a bridge between property
-          owners,tenants and vendors.
+          An end-to-end platform providing tools that help property managers
+          automate and streamline their workflow.
         </p>
       </div>
       <div className="w-full flex justify-center  items-center flex-col gap-4">

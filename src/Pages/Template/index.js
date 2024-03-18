@@ -4,6 +4,7 @@ import { Facebook, LinkedIn, LockClock, Twitter } from "@mui/icons-material";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { api } from "../../unsplash";
 
 export default function Template(props) {
@@ -55,22 +56,19 @@ export default function Template(props) {
   }, []);
   return (
     <>
+      <Helmet>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={img} />
+      </Helmet>
       {loader ? (
         <div className="flex w-full justify-center items-center  md:h-screen ">
           <img src="/loader.gif" width="200px" alt="loader" />
         </div>
       ) : (
         <div className="flex md:flex-row flex-col items-start justify-start md:min-h-screen h-full md:px-10  mt-32 p-5">
-          <head>
-            <meta charset="UTF-8" />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1.0"
-            />
-            <title>{title}</title>
-            <meta property="og:title" content={title} />
-            <meta property="og:image" content={"/logo.png"} />
-          </head>
           <div>
             <p className="mt-4 font-bold text-xl">
               {title.replaceAll('"', "")}
@@ -112,7 +110,7 @@ export default function Template(props) {
             />
             <div className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex  mb-20 ">
               <p
-                className="mt-10 py-2"
+                className="mt-10 py-2 leading-loose"
                 style={{ width: "100%" }}
                 dangerouslySetInnerHTML={{
                   __html: post.replace(/\\n/g, "<br>"),
