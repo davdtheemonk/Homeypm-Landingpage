@@ -62,6 +62,7 @@ export default function Template(props) {
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta property="og:image" content={img} />
+        <meta property="og:type" content="article" />
       </Helmet>
       {loader ? (
         <div className="flex w-full justify-center items-center  md:h-screen ">
