@@ -32,11 +32,6 @@ export default function LpSection(props) {
             "md:hidden block h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
           }
         />
-        <Button
-          title="Join Waitlist"
-          action={props.handleOpenModal}
-          style=" md:hidden block h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
-        />
       </div>
 
       <img
