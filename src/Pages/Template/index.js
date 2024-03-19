@@ -71,9 +71,9 @@ export default function Template(props) {
       ) : (
         <div className="flex md:flex-row flex-col items-start justify-start md:min-h-screen h-full md:px-10  mt-32 p-5">
           <div>
-            <p className="mt-4 font-bold text-xl">
+            <h1 className="mt-4 font-bold text-2xl">
               {title.replaceAll('"', "")}
-            </p>
+            </h1>
 
             <div className="flex justify-start items-center align-center gap-2 flex-row mt-4">
               <img
