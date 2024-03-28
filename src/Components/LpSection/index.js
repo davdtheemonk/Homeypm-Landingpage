@@ -34,11 +34,7 @@ export default function LpSection(props) {
         />
       </div>
 
-      <img
-        src="/demodashboard.png"
-        alt="dashboard"
-        className=" md:w-[60vw]  w-full "
-      />
+      <img src="./pic.png" alt="dashboard" className=" md:w-[60vw]  w-full " />
     </div>
   );
 }
