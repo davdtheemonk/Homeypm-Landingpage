@@ -62,6 +62,7 @@ export default function Template(props) {
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta property="og:image" content={img} />
+        <meta property="og:type" content="article" />
       </Helmet>
       {loader ? (
         <div className="flex w-full justify-center items-center  md:h-screen ">
@@ -70,9 +71,9 @@ export default function Template(props) {
       ) : (
         <div className="flex md:flex-row flex-col items-start justify-start md:min-h-screen h-full md:px-10  mt-32 p-5">
           <div>
-            <p className="mt-4 font-bold text-xl">
+            <h1 className="mt-4 font-bold text-2xl">
               {title.replaceAll('"', "")}
-            </p>
+            </h1>
 
             <div className="flex justify-start items-center align-center gap-2 flex-row mt-4">
               <img
@@ -110,7 +111,7 @@ export default function Template(props) {
             />
             <div className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex  mb-20 ">
               <p
-                className="mt-10 py-2"
+                className="mt-10 py-2 leading-loose"
                 style={{ width: "100%" }}
                 dangerouslySetInnerHTML={{
                   __html: post.replace(/\\n/g, "<br>"),

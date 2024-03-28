@@ -61,15 +61,6 @@ export default function Team(props) {
             <p className="font-bold text-white mb-1">Daniel Kalutu</p>
             <p className="text-gray">Founding Engineer</p>
           </div>
-          <div className="flex flex-col justify-center items-center p-2">
-            <img
-              src="/jmweni.jpeg"
-              alt="Founding Engineer - Dan"
-              className="w-[100px] h-[100px] rounded-full mb-2"
-            />
-            <p className="font-bold text-white mb-1">James Thaura</p>
-            <p className="text-gray">Founding Engineer</p>
-          </div>
         </div>
       </Box>
     </Modal>

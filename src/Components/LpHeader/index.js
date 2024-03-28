@@ -61,13 +61,6 @@ export default function LpHeader(props) {
             "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
           }
         />
-        <Button
-          title="Join Waitlist"
-          action={props.handleOpenModal}
-          style={
-            "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-darkblue  text-white cursor-pointer font-[500]  rounded-md flex justify-center items-center "
-          }
-        />
       </div>
       <div className="md:hidden text-white ml-auto flex justify-center items-center">
         <MenuIcon
