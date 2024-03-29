@@ -31,16 +31,15 @@ export default function Footer() {
       links: [
         { title: "About", url: "/about" },
         { title: "Blog", url: "/blog" },
-        { title: "Team", url: "/" },
       ],
     },
     {
       id: 1,
       title: "Products",
       links: [
-        { title: "Property Managers", url: "/" },
-        { title: "Tenants", url: "/" },
-        { title: "Vendors", url: "/" },
+        { title: "Property Management", url: "/" },
+        { title: "Self Hosting", url: "/" },
+        { title: "Campwell AI Co-pilot", url: "/" },
       ],
     },
     {
@@ -49,7 +48,6 @@ export default function Footer() {
       links: [
         { title: "Terms of service", url: "/" },
         { title: "Privacy Policy", url: "/" },
-        { title: "End User Agreement", url: "/" },
       ],
     },
   ];

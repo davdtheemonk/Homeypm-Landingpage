@@ -228,11 +228,7 @@ input[type="file"] {
 }
 
 .gradient {
-  background: linear-gradient(
-    268.98deg,
-    var(--secondary) 0%,
-    var(--primary) 95.58%
-  );
+  background: linear-gradient(90deg, rgba(43,103,119,1) 0%, rgba(95,101,87,1) 15%, rgba(11,18,41,1) 100%);
 }
 
 .gradient-reverse {
