@@ -63,6 +63,13 @@ export default function Template(props) {
         <meta property="og:title" content={title} />
         <meta property="og:image" content={img} />
         <meta property="og:type" content="article" />
+        <meta
+          property="og:description"
+          content={post
+            .replaceAll('"', "")
+            .replace(/<\/?[^>]+(>|$)/g, "")
+            .slice(0, 100)}
+        />
       </Helmet>
       {loader ? (
         <div className="flex w-full justify-center items-center  md:h-screen ">
