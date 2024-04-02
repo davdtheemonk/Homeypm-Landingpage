@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TenantManagement() {
   return (
-    <div className="flex md:flex-row flex-col justify-center items-start gap-4   w-[80%] mt-8 md:gap-12 ">
+    <div className="grid md:grid-cols-2 gap-10 w-full ">
       <div className="gap-4 flex flex-col md:text-start text-center w-full">
         <h2 className="text-primary">Tenant Management</h2>
         <img src="./tenant.png" className="rounded-md      w-full " />

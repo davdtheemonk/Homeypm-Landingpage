@@ -3,7 +3,7 @@ import Button from "../Button";
 import MovingText from "react-moving-text";
 export default function LpSection(props) {
   return (
-    <div className="  w-full flex   lg:px-56 md:px-auto md:h-screen h-[60%] p-10  mt-20 items-center gap-7 flex-col ">
+    <div className="  w-full flex   lg:px-56 md:px-auto h-screen  p-10  mt-20 items-center gap-7 flex-col ">
       <div className="mt-10 md:w-[50%] flex flex-col gap-5 ">
         <MovingText
           type="flipFromTop"
@@ -19,7 +19,7 @@ export default function LpSection(props) {
           </p>
         </MovingText>
 
-        <p className="text-white text-center md:text-[22px] w-[70%] m-auto">
+        <p className="text-white text-center md:text-[22px] m-auto">
           An end-to-end platform providing tools that help property managers
           automate and streamline their workflow.
         </p>

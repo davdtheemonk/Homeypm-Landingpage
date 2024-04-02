@@ -25,9 +25,19 @@ export default function Controller() {
   const handleOpenTeamModal = () => {
     openTeamModal(true);
   };
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
   return (
     <div className="relative">
       <LpHeader
+        handleMouseEnter={handleMouseEnter}
+        isDropdownVisible={isDropdownVisible}
         handleOpenModal={handleOpenModal}
         handleOpenTeamModal={handleOpenTeamModal}
         handleOpenDrawer={handleOpenDrawer}
@@ -40,7 +50,10 @@ export default function Controller() {
         toggleDrawer={toggleDrawer}
         drawerState={drawerState}
       />
-      <Outlet handleOpenModal={handleOpenModal} />
+      <Outlet
+        handleMouseLeave={handleMouseLeave}
+        handleOpenModal={handleOpenModal}
+      />
       <Footer />
     </div>
   );

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Tooltip } from "@mui/material";
+import DropdownMenu from "../DropdownMenu";
 import { useNavigate, Link } from "react-router-dom";
 export default function LpHeader(props) {
   const navigate = useNavigate();
   const location = window.location.pathname;
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
   const scheduleDemo = () => {
     window.open("https://calendly.com/mugalladave/homey-demo", "_self");
   };
@@ -20,11 +30,17 @@ export default function LpHeader(props) {
         className="cursor-pointer md:w-[170px] md:h-[90px] w-[120px] h-[70px]"
       />
       <div className="hidden md:flex  ml-20 mr-10 justify-evenly align-center ">
-        <Tooltip title="Coming Soon">
+        <div
+          className="menu"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <Link className="cursor-pointer hover:text-blue text-white text-[20px] font-[500] font-[22px]">
             Products
           </Link>
-        </Tooltip>
+          {isDropdownVisible && <DropdownMenu />}
+        </div>
+
         <Link
           to="/about"
           className={`cursor-pointer  ${
