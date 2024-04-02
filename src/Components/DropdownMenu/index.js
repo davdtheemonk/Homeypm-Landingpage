@@ -6,10 +6,10 @@ const DropdownMenu = () => {
       <div className="flex flex-col justify-start leading-2 mt-4">
         <p className="text-white font-bold text-xl">Property Management OS</p>
         <p className="text-gray text-md leading-8 mr-14">
-          Homey allows property management to streamline their workflow by
+          Homey allows property managers to streamline their workflow by
           giving them the right tools on a single workspace. Property managers
           enjoy tools such as cashflow analysis, Tenant management, 3rd party
-          intergrations, Inbuilt Accounting feature, Invoicing and so much more.
+          intergrations, an open API, Inbuilt Accounting feature, Invoicing and so much more.
         </p>
       </div>
       <ul>
