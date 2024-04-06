@@ -76,13 +76,11 @@ export default function Template(props) {
           <img src="/loader.gif" width="200px" alt="loader" />
         </div>
       ) : (
-        <div className="flex md:flex-row flex-col items-start justify-start md:min-h-screen h-full md:px-10  mt-32 p-5">
-          <div>
-            <h1 className="mt-4 font-bold text-2xl">
-              {title.replaceAll('"', "")}
-            </h1>
+        <div className="flex  flex-col w-full m-auto md:min-h-screen h-full md:px-10  mt-32 p-5">
+          <div className="flex  w-full flex-col md:justify-center md:items-center  justify-start items-start gap-4  m-auto md:mt-8">
+            <h1 className=" font-bold text-2xl">{title.replaceAll('"', "")}</h1>
 
-            <div className="flex justify-start items-center align-center gap-2 flex-row mt-4">
+            <div className="flex justify-start items-center align-center gap-2 flex-row">
               <img
                 src={
                   writer.replaceAll('"', "") === "David Mugalla"
@@ -111,14 +109,12 @@ export default function Template(props) {
                 </div>
               </div>
             </div>
-            <img
-              alt="cover"
-              className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex mt-4 "
-              src={img}
-            />
-            <div className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex  mb-20 ">
+            <div className="flex w-full md:w-[60%]">
+              <img alt="cover" className="cover w-full h-auto" src={img} />
+            </div>
+            <div className="md:w-[60%] w-[100%]  md:mx-0 mx-auto flex  mb-6 ">
               <p
-                className="mt-10 py-2 leading-loose"
+                className="py-2 leading-loose"
                 style={{ width: "100%" }}
                 dangerouslySetInnerHTML={{
                   __html: post.replace(/\\n/g, "<br>"),
@@ -126,31 +122,33 @@ export default function Template(props) {
               ></p>
             </div>
           </div>
-          <div className="md:w-[400px] bg-darkblue card p-8 rounded-md md:fixed right-40 flex  flex-col mt-10 md:mt-0 text-white">
-            <p className="text-center mb-4 font-bold">About author</p>
-            <img
-              src={
-                writer.replaceAll('"', "") === "David Mugalla"
-                  ? "/david.jpg"
-                  : writer.replaceAll('"', "") === "Daniel Kalutu"
-                  ? "/kalutu.jpg"
-                  : writer === "James Thaura"
-                  ? "/jmweni.jpeg"
-                  : writer.replaceAll('"', "") === "Maxwell Gad"
-                  ? "/max.jpeg"
-                  : ""
-              }
-              alt="avatar"
-              className="w-32  rounded-full mx-auto "
-            />
+          <div className="md:w-[60%] flex-col bg-darkblue card p-8 rounded-md gap-4  flex mx-auto md:flex-row text-white">
+            <div className="flex flex-col  justify-center items-center ">
+              <p className="text-center mb-4 font-bold">About author</p>
+              <img
+                src={
+                  writer.replaceAll('"', "") === "David Mugalla"
+                    ? "/david.jpg"
+                    : writer.replaceAll('"', "") === "Daniel Kalutu"
+                    ? "/kalutu.jpg"
+                    : writer === "James Thaura"
+                    ? "/jmweni.jpeg"
+                    : writer.replaceAll('"', "") === "Maxwell Gad"
+                    ? "/max.jpeg"
+                    : ""
+                }
+                alt="avatar"
+                className="w-32  rounded-full mx-auto "
+              />
+            </div>
             {writer.replaceAll('"', "") === "David Mugalla" && (
-              <>
-                <p className="mt-4 text-center text-sm ">
+              <div className="flex flex-col   ">
+                <p className="md:text-start text-center text-sm ">
                   <b>{writer.replaceAll('"', "")}</b> is a passionate software
                   engineer and is currently the co-founder and CEO of Homey
                   heading growth and development. Connect with him below.
                 </p>
-                <div className="flex flex-row justify-center items-center  mt-6 gap-4">
+                <div className="w-full flex flex-row justify-center md:justify-start md:items-start  items-center  mt-6 gap-4">
                   <Facebook className="cursor-pointer"></Facebook>
                   <Twitter
                     onClick={() => {
@@ -168,7 +166,7 @@ export default function Template(props) {
                     className="cursor-pointer"
                   />
                 </div>
-              </>
+              </div>
             )}
             {writer.replaceAll('"', "") === "Maxwell Gad" && (
               <>

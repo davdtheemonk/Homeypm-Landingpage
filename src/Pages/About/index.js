@@ -71,7 +71,7 @@ export default function About() {
         </div>
       </div>
       <div className=" md:px-56 p-10  flex flex-col w-full md:gap-20 gap-10 ">
-        <div className="flex md:flex-row flex-col md:h-120  w-full justify-center md:justify-between gap-5 ">
+        <div className="grid md:grid-cols-2  w-full ">
           <img
             src="/houses.gif"
             alt="house-animation"
