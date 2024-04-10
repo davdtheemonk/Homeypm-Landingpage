@@ -259,3 +259,28 @@ li:hover {
 }
 
 
+
+.section_div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media screen and (min-width: 750px) {
+  .section_div {
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section_div {
+    gap: 100px;
+  }
+}
+
+.section_div.styles_revers__Bzn4A {
+  flex-direction: row-reverse;
+}

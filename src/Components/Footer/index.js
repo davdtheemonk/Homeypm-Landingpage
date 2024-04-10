@@ -39,7 +39,8 @@ export default function Footer() {
       links: [
         { title: "Property Management", url: "/" },
         { title: "Self Hosting", url: "/" },
-        { title: "Campwell AI Co-pilot", url: "/" },
+        { title: "3rd party integrations", url: "/" },
+        { title: "Invoicing", url: "/" },
       ],
     },
     {

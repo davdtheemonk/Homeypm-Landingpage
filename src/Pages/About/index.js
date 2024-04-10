@@ -78,7 +78,7 @@ export default function About() {
             className=" cursor-pointer rounded-2lg h-80 rounded-lg "
           />
           <div className="flex flex-col gap-5 md:m-auto">
-            <p className="font-bold text-4xl text-dark text-start">
+            <p className="font-bold text-xl text-dark text-start">
               Empower Your Property Management Journey with Homey: Streamline,
               Optimize, Succeed
             </p>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Tooltip } from "@mui/material";
+import ScrollIntoView from "react-scroll-into-view";
 import DropdownMenu from "../DropdownMenu";
 import { useNavigate, Link } from "react-router-dom";
 export default function LpHeader(props) {
@@ -38,6 +38,7 @@ export default function LpHeader(props) {
           <Link className="cursor-pointer hover:text-blue text-white text-[20px] font-[500] font-[22px]">
             Products
           </Link>
+
           {isDropdownVisible && <DropdownMenu />}
         </div>
 
@@ -49,11 +50,12 @@ export default function LpHeader(props) {
         >
           About
         </Link>
-        <Tooltip title="Coming Soon">
+        <ScrollIntoView selector="#features">
           <Link className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue">
             Pricing
           </Link>
-        </Tooltip>
+        </ScrollIntoView>
+
         <Link
           onClick={() => {
             props.handleOpenTeamModal();

@@ -2,12 +2,12 @@ import React from "react";
 
 export default function TenantManagement() {
   return (
-    <div className="grid md:grid-cols-2 gap-10 w-full ">
+    <div className="grid md:grid-cols-2 md:gap-10 w-full ">
       <div className="gap-4 flex flex-col md:text-start text-center w-full">
         <h2 className="text-primary">Tenant Management</h2>
-        <img src="./tenant.png" className="rounded-md      w-full " />
+        <img src="./tenant.png" className="rounded-md  w-full " />
       </div>
-      <p className="md:w-[70%] ml-auto md:text-start  text-center mt-10 leading-8 ">
+      <p className=" ml-auto md:text-start  text-xl text-center mt-10 leading-8 ">
         Homey's tenant management system simplifies property tasks, from
         onboarding to maintenance, enhancing communication and accountability.
         With user-friendly interfaces and robust functionalities, Homey

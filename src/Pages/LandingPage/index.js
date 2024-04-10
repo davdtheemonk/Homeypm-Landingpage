@@ -7,6 +7,8 @@ import TenantManagement from "../../Components/TenantManagement";
 import Invoicing from "../../Components/Invoicing";
 import Button from "../../Components/Button";
 import CampwellFeatue from "../../Components/CampwellFeature";
+import Selfhosting from "../../Components/Selfhosting";
+import Pricing from "../../Components/Pricing";
 
 export default function LandingPage() {
   const [isOpen, openModal] = useState(false);
@@ -20,7 +22,7 @@ export default function LandingPage() {
     window.open("https://calendly.com/mugalladave/homey-demo", "_self");
   };
   return (
-    <div className=" flex flex-col h-full w-full  z-4 gradient ">
+    <div id="features" className=" flex flex-col h-full w-full  z-4 gradient ">
       <LpSection
         handleOpenModal={handleOpenModal}
         scheduleDemo={scheduleDemo}
@@ -53,6 +55,8 @@ export default function LandingPage() {
           />
         </div>
         <CampwellFeatue />
+        <Selfhosting />
+        <Pricing scheduleDemo={scheduleDemo} />
       </div>
     </div>
   );

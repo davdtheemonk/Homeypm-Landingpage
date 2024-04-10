@@ -3,8 +3,8 @@ import Button from "../Button";
 import MovingText from "react-moving-text";
 export default function LpSection(props) {
   return (
-    <div className="  w-full flex   lg:px-56 md:px-auto h-screen  p-10  mt-20 items-center gap-7 flex-col ">
-      <div className="mt-10 md:w-[50%] flex flex-col gap-5 ">
+    <div className="  w-full flex   lg:px-56 md:px-auto h-screen    mt-20 items-center gap-10 flex-col ">
+      <div className="mt-10 md:w-[50%] p-10 flex flex-col gap-10 ">
         <MovingText
           type="flipFromTop"
           duration="1200ms"
@@ -14,7 +14,7 @@ export default function LpSection(props) {
           iteration="1"
           fillMode="none"
         >
-          <p className=" text-white md:text-[40px] text-center text-[24px] font-bold">
+          <p className=" text-white md:text-[40px] text-center text-[40px] font-bold">
             AI Powered Cloud Solutions For Property Management
           </p>
         </MovingText>
@@ -29,7 +29,7 @@ export default function LpSection(props) {
           title="Request Demo"
           action={props.scheduleDemo}
           style={
-            "md:hidden block h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+            " block h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
           }
         />
       </div>
