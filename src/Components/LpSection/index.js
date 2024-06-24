@@ -2,6 +2,9 @@ import React from "react";
 import Button from "../Button";
 import MovingText from "react-moving-text";
 export default function LpSection(props) {
+  const login = () => {
+    window.open("https://app.homeypm.com", "_self");
+  };
   return (
     <div className="  w-full flex   lg:px-56 md:px-auto h-screen    mt-20 items-center gap-10 flex-col ">
       <div className="mt-10 md:w-[50%] p-10 flex flex-col gap-10 ">
@@ -24,9 +27,16 @@ export default function LpSection(props) {
           automate and streamline their workflow.
         </p>
       </div>
-      <div className="w-full flex justify-center  items-center flex-col gap-4">
+      <div className="flex flex-row justfiy-center items-center gap-6">
         <Button
-          title="Request Demo"
+          action={props.login}
+          title="Login"
+          style={
+            "md:hidden md:flex md:ml-auto  h-[50px]  p-6 bg-dark text-white  cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+          }
+        />
+        <Button
+          title="Get Started"
           action={props.scheduleDemo}
           style={
             " block h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "

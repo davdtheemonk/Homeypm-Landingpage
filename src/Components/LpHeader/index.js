@@ -19,6 +19,9 @@ export default function LpHeader(props) {
   const scheduleDemo = () => {
     window.open("https://calendly.com/mugalladave/homey-demo", "_self");
   };
+  const login = () => {
+    window.open("https://app.homeypm.com", "_self");
+  };
   return (
     <div className="fixed gradient top-0 left-0 z-10 flex w-full lg:px-56 md:px-auto p-4 justify-start items-center flex-row">
       <img
@@ -50,7 +53,7 @@ export default function LpHeader(props) {
         >
           About
         </Link>
-        <ScrollIntoView selector="#features">
+        <ScrollIntoView selector="features">
           <Link className=" cursor-pointer text-white text-[20px]  ml-10 font-[500] hover:text-blue">
             Pricing
           </Link>
@@ -73,7 +76,14 @@ export default function LpHeader(props) {
       </div>
       <div className="flex flex-row justfiy-center items-center gap-6 md:ml-auto">
         <Button
-          title="Request Demo"
+          title="Login"
+          action={login}
+          style={
+            "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-dark text-white  cursor-pointer font-[500]  rounded-md flex justify-center items-center "
+          }
+        />
+        <Button
+          title="Get Started"
           action={scheduleDemo}
           style={
             "hidden md:flex md:ml-auto  h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "

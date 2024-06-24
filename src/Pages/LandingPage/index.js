@@ -21,11 +21,18 @@ export default function LandingPage() {
   const scheduleDemo = () => {
     window.open("https://calendly.com/mugalladave/homey-demo", "_self");
   };
+  const login = () => {
+    window.open("https://app.homeypm.com", "_self");
+  };
   return (
-    <div id="features" className=" flex flex-col h-full w-full  z-4 gradient ">
+    <div
+      id="features"
+      className=" flex flex-col h-full w-full flex-grow  z-4 gradient "
+    >
       <LpSection
         handleOpenModal={handleOpenModal}
         scheduleDemo={scheduleDemo}
+        login={login}
       />
       <WaitlistModal
         isOpen={isOpen}
@@ -47,7 +54,7 @@ export default function LandingPage() {
         <Invoicing />
         <div className="w-full flex justify-center  items-center flex-col">
           <Button
-            title="Request Demo"
+            title="Get Started"
             action={scheduleDemo}
             style={
               "h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "

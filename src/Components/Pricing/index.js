@@ -4,7 +4,7 @@ import Button from "../Button";
 import Badge from "@mui/material/Badge";
 export default function Pricing(props) {
   return (
-    <div className="justify-center items-center flex w-full">
+    <div id="features" className="justify-center items-center flex w-full">
       <div className="card rounded-md p-10 m-auto flex flex-col justify-center items-center shadow-md w-full md:w-[350px] gap-2">
         <p className="text-grey">Starting at a min of </p>
         <div className="flex justify-center items-center ">
@@ -48,7 +48,7 @@ export default function Pricing(props) {
         </div>
 
         <Button
-          title="Get started"
+          title="Get Started"
           action={props.scheduleDemo}
           style={
             " block h-[50px]  p-6 bg-white text-dark border-1 border-gradient border-solid cursor-pointer font-[500]  rounded-md flex justify-center items-center "
