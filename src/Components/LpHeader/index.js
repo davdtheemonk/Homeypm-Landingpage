@@ -17,7 +17,7 @@ export default function LpHeader(props) {
     setDropdownVisible(false);
   };
   const scheduleDemo = () => {
-    window.open("https://calendly.com/mugalladave/homey-demo", "_self");
+    window.open("https://calendly.com/mugalladave/meeting", "_self");
   };
   const login = () => {
     window.open("https://app.homeypm.com", "_self");
